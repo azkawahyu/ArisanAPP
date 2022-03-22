@@ -1,0 +1,28 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "ArisanApp",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "port": "3000"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "ArisanApp",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "port": "3000"
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL",
+    "dialect": "postgres",
+    "protocol": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "rejectUnauthorized": false
+      }
+    }
+  }
+}

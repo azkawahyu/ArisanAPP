@@ -1,0 +1,47 @@
+{
+  "name": "mvp-master",
+  "version": "1.0.0",
+  "description": "MVP",
+  "main": "server.js",
+  "jest": {
+    "testTimeout": 10000
+  },
+  "scripts": {
+    "dev": "npx nodemon server.js",
+    "undoMigrate": "npx sequelize db:migrate:undo:all",
+    "migrate": "npx sequelize db:migrate",
+    "heroku-release": "node_modules/.bin/sequelize db:migrate",
+    "test": "npx sequelize db:migrate:undo:all && npx sequelize db:migrate && jest --detectOpenHandles"
+  },
+  "author": "ArisanTeam",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi-date": "^2.0.1",
+    "@joi/date": "^2.1.0",
+    "bcrypt": "^5.0.1",
+    "cloudinary": "^1.28.1",
+    "cors": "^2.8.5",
+    "dotenv": "^15.0.0",
+    "express": "^4.17.2",
+    "joi": "^17.6.0",
+    "joi-date-extensions": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "multer": "^1.4.4",
+    "multer-cloudinary": "^1.1.0",
+    "multer-storage-cloudinary": "^4.0.0",
+    "nodemailer": "^6.7.2",
+    "passport": "^0.5.2",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.7.1",
+    "sequelize": "^6.15.0",
+    "sequelize-cli": "^6.4.1"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
+  }
+}
